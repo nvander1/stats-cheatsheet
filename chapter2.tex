@@ -1,3 +1,4 @@
+\subsection{Sample Mean, Sample Median, and Sample Mode}
 \begin{defi}{Sample Mean}
 $$\bar{x} = \sum_{i=1}^n x_i/n$$
 \end{defi}
@@ -13,10 +14,6 @@ $$s^2 = \left(\sum_{i=1}^n x_i^2 - n\bar{x}^2\right)/(n-1)$$
 
 $$y_i = ax_i + b \Rightarrow s_y^2 = as_x^2$$
 
-\begin{defi}{Standard Deviation}
-$$s = \sqrt{s^2}$$
-\end{defi}
-
 With data $x$ in increasing order:
 \begin{equation*}
 100p \text{ Percentile} = \begin{cases}
@@ -24,3 +21,7 @@ With data $x$ in increasing order:
 \frac{1}{2}x_{np}x_{np+1} &, \text{otherwise}
 \end{cases}
 \end{equation}
+
+\begin{defi}{Sample Correlation Coefficient}
+$$\frac{1}{(n-1)s_xs_y}\sum_{i=1}^n(x_i-\bar{x})(y_i-\bar{y})$$
+\end{defi}
