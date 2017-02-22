@@ -1,0 +1,76 @@
+\subsection{Random Variables}
+\begin{defi}
+    Quantities determined by the result of an experiment. They have probabilityy distributions.
+\end{defi}
+\subsection{Types of Random Variables}
+\subsubsection{Discrete}
+\begin{defi}
+    For a discrete random variable X, its probability mass function is
+    \[p(a) = P\{X=a\}\]
+
+    Additionally, 
+    \[p(x) \geq 0\]
+    \[\sum_{i=1}^{\infty} p(x_i) = 1\]
+\end{defi}
+\begin{defi}
+    The cumulative distribution function F is
+    \[F(a) = \sum_{x\leq a}p(x)\]
+\end{defi}
+\subsubsection{Continuous}
+\begin{defi}
+    For a continuous random variable X, its probability density function is
+    \[f:\mathbb{R}\rightarrow[0,\infty]\]
+    \[f(x) = P\{X=x\}\]
+    Additionally,
+    \[f(x) \geq 0 \forall x\]
+    \[\int_{-\infty}^{\infty}f(x)dx = 1\]
+\end{defi}
+\begin{defi}
+    The cumulative distribution function F is
+    \[F(x) = P\{X\leq x\} 
+    = \int_{-\infty}^{\infty}f(x)dx\]
+\end{defi}
+
+\subsection{Jointly Distributed Random Variables}
+Let X, Y be random variables. The joint CDF of X and Y is 
+\[ F(x, y) = P(X\leq x, Y\leq y), x,y\in\mathbb{R} \]
+Note: X and Y can be both discrete or continuous.\\
+
+If X, Y are both discrete, then the joint pmf is
+\[ p(x, y) = P(X=x, Y=y) \]
+If X, Y are both continuous, then the joint pmf is
+\[ f(x, y) : \mathbb{R}^2\rightarrow [0,\infty] \]
+\[ f(x,y) \geq 0 \forall x,y \]
+\[ \int \int f(x,y) dxdy = 1 \]
+
+We call the (cdf, pmf, pdf) of X and Y the marginal (cdf, pmf, pdf).
+\subsubsection{Independent R.V.s}
+Independence
+
+Two random variables X,Y are said to be independent if 
+\[ P(X\leq x, Y\leq y) = P(X=x)\times P(Y=y) \forall x, y \]
+
+If X and Y are discrete, X and Y are independent if 
+\[ P(X=x, Y=y) = P(X=x)P(Y=y) \]
+
+If X and Y are continuous, X and Y are independent if 
+\[ f(x, y) = f_X(x)f_Y(y) \]
+\subsection{Expectation}
+Expectation = E[X] = where does X take values?  (location parameter)
+
+
+X is discrete
+
+\[ E[X] = \sum_{\text{t possible values}} t P(X=t) \]
+
+X is continuous
+
+\[ E[X] = \int_{-\infty}^{\infty} tf(t)dt \]
+\subsection{Properties of the Expected Value}
+\subsubsection{Expected Value of Sums of Random Variables}
+\subsection{Variance}
+Variance = Var(X) = how scattered are the values?  (scale parameter)
+
+\[ Var(X) = E[(X-E[X])^2] = E[X^2] - (E[X])^2 \]
+\subsection{Covariance and Variance of Sums of R.V.s}
+\subsection{Moment Generating Functions}
