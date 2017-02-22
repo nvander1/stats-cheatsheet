@@ -1,4 +1,4 @@
 all:
-	xelatex cheatsheet.xtx
+	xelatex cheatsheet.tex
 clean:
 	rm *.aux *.log *.out *.pdf
