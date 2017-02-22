@@ -1,0 +1,30 @@
+\subsection{Sample Space and Events}
+\subsubsection{Events}
+\begin{defi}
+  The sample space, $S$ is the set of all possible outcomes.
+  Subsets of $S$ are individual events.
+\end{defi}
+\subsection{Algebra of Events}
+Communative law: $$E\cup F = F\cup E, EF=FE$$
+
+Associative law: $$(E \cup F) \cup G = E \cup (F \cup G), (EF)G=E(FG)$$
+
+Distributive law: $$(E\cup F)G = EG\cup FG, EF\cup G = (E\cup G)(F\cup G)$$
+
+\subsection{Axioms of Probability}
+\begin{prop}
+$$1 = P(S) = P(E \cup E^\complement ) = P(E) + P(E^\complement)$$
+$$P(E^\complement) = 1 - P(E)$$
+$$P(E \cup F) = P(E) + P(F) - P(E\cap F)$$
+\end{prop}
+
+\subsection{Sample Spaces With Equally Likely Outcomes}
+$$P(E) = \frac{\text{Number of points in }E}{N}$$
+$n$ items picked $k$ at a time without replacement when order matters, there are $\binom{n}{k}$ possible groups.
+For orderings, there are $n!$ ways to order all of the items.
+
+\subsection{Conditional Probability}
+$$P(E|F) = \frac{P(EF)}{P(F)}$$
+
+\subsection{Bayes' Formula}
+$$P(A|B) = \frac{P(B|A)P(A)}{P(B)}
