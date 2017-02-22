@@ -31,6 +31,10 @@
     = \int_{-\infty}^{\infty}f(x)dx\]
 \end{defi}
 
+Useful properties of CDFs:
+\[P(a<X\leq b) = F_X(b) - F_X(a)\]
+\[P(X<x) = F_X(x) - P_X(x)\]
+
 \subsection{Jointly Distributed Random Variables}
 Let X, Y be random variables. The joint CDF of X and Y is 
 \[ F(x, y) = P(X\leq x, Y\leq y), x,y\in\mathbb{R} \]
@@ -73,4 +77,12 @@ Variance = Var(X) = how scattered are the values?  (scale parameter)
 
 \[ Var(X) = E[(X-E[X])^2] = E[X^2] - (E[X])^2 \]
 \subsection{Covariance and Variance of Sums of R.V.s}
+\[Cov(X, Y) = E[(X-\mu_X)(Y-\mu_Y)]\]
+\[Cov(X, Y) = E[XY] - E[X]E[Y]\]
 \subsection{Moment Generating Functions}
+\begin{center}
+    $\phi(t) = E[e^{tX}] = $\begin{cases}
+        $\sum_x e^{tx}p()$ & if X is discrete\\
+        $\int_{-\infty}^{infty}e^{tx}f(x)dx$ & if X is continuous
+    \end{cases}
+\end{center}
