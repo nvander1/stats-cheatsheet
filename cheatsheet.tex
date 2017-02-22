@@ -1,18 +1,8 @@
 \documentclass[10pt,landscape]{article}
 \usepackage{multicol}
 \usepackage{calc}
-\usepackage{ifthen}
 \usepackage[landscape]{geometry}
 \usepackage{amsmath,amsthm,amsfonts,amssymb}
-\usepackage{color,graphicx,overpic}
-\usepackage{hyperref}
-\usepackage{polyglossia}
-% \setdefaultlanguage{french}
-\usepackage{microtype}
-\usepackage{fontspec} % Xelatex
-\usepackage{dsfont}
-\usepackage{unicode-math}
-%\setmathfont{Latin Modern Math}
 
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
 \newcommand*\conv{\mathop{}\!\mathrm{conv}}
@@ -24,12 +14,7 @@
 % This sets page margins to .5 inch if using letter paper, and to 1cm
 % if using A4 paper. (This probably isn't strictly necessary.)
 % If using another size paper, use default 1cm margins.
-\ifthenelse{\lengthtest { \paperwidth = 11in}}
-{ \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
-{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
-  {\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
-  {\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
-}
+\geometry{top=.5in,left=.5in,right=.5in,bottom=.5in}
 
 % Turn off header and footer
 \pagestyle{empty}
@@ -50,10 +35,6 @@
 {\normalfont\small\bfseries}}
 \makeatother
 
-% Define BibTeX command
-\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
-T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
-
 % Don't print section numbers
 \setcounter{secnumdepth}{0}
 
@@ -62,10 +43,10 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \setlength{\parskip}{0pt plus 0.5ex}
 
 %My Environments
-\newtheorem*{defi}{Définition}
+\newtheorem*{defi}{Definition}
 \newtheorem*{prop}{Proposition}
-\newtheorem*{theorem}{Théorème}
-\newtheorem*{lemma}{Lemme}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
 \newtheorem*{corol}{Corollaire}
 % -----------------------------------------------------------------------
 
@@ -85,9 +66,6 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
   % Start Writing here
   \section{Descriptive Statistics}
-  \begin{def}
-    ifi
-  \end{def}
   \input{chapter2.tex}
   \section{Elements of Probability}
   \input{chapter3.tex}
