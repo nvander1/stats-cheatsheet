@@ -1,0 +1,31 @@
+\subsection{Maximum Likelihood Estimators}
+Given sample $X_1\ldots X_n$ with joint distribution $f$ known
+except for some parameter $\theta$\@. Define likelihood function:
+$$L(\theta) = f_\theta(x_1, \ldots x_n)$$
+If $X_i$ are independent,
+$$L(\theta) = f_\theta(x_1)\cdots f_\theta(x_n)\@.$$
+
+To find $\hat{\theta}_{MLE}$ maximize $L(\theta)$\@.
+
+\subsubsection{Bernoulli}
+$$\hat{p}_{MLE} = \bar{X}$$
+\subsubsection{Binomial}
+$$\hat{p}_{MLE} = \bar{X}$$
+\subsubsection{Poisson}
+$$\hat{\lambda}_{MLE} = \bar{X}$$
+\subsubsection{Normal}
+When $\mu$ and $\sigma$ unknown:
+$$\hat{\mu}_{MLE} = \bar{X}$$
+$$\hat{\sigma}_{MLE} = \sqrt{\frac{\sum(X_i - \bar{X})^2}{n}}$$
+When only $\sigma$ unknown:
+$$\hat{\sigma^2}_{MLE} = \frac{\sum(X_i - \mu)}{n}$$
+
+\subsection{Interval Estimates}
+\subsubsection{2-Sided Confidence Intervals}
+$$[\bar{x}\pm z_{\alpha/2}\frac{\sigma}{\sqrt{n}}]$$
+\subsubsection{Upper Confidence Intervals}
+$$[\bar{x}- z_{\alpha}\frac{\sigma}{\sqrt{n}}, \infty]$$
+\subsubsection{Lower Confidence Intervals}
+$$[-\infty, \bar{x}+ z_{\alpha}\frac{\sigma}{\sqrt{n}}]$$
+\subsubsection{Normal Mean with Unknown Variance}
+$$[\bar{x}\pm t_{\alpha/2, n-1}\frac{s}{\sqrt{n}}]$$
