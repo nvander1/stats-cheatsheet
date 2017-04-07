@@ -91,7 +91,7 @@ $$X=\sum_i^n Z_i^2$$
 $$X\sim \chi_n^2$$
 $E[X] = n$, $Var(X) = 2n$.
 CDF:
-$$P(X > \chi_{\alpha,n}^2) = \alpha,\ \alpha\in \{0,1\}$$
+$$P(X > \chi_{\alpha,n}^2) = \alpha,\ \alpha\in [0,1]$$
 $$P(X \leq \chi_{\alpha,n}^2) = 1-\alpha$$
 If $n=1$:
 $$X\sim \chi_1^2$$
@@ -99,3 +99,19 @@ $$P(X<x) = P(-\sqrt{x} < Z < \sqrt{x})$$
 $$=2\Phi(\sqrt{x})-1$$
 If $n=2$:
 $$X\sim \chi_2^2 \sim Exponential\left(\frac{1}{2}\right)$$
+\subsubsection{t-Distribution}
+$Z$ std nrv ind to, $\chi_n^2$
+$$T_n = \frac{Z}{\sqrt{\chi_n^2/n}} \sim t_n$$
+$E[T_n] = 0, n>1 \quad Var(T_n) = \frac{n}{n-2}, n>2$
+$$P\{T_n > t_{\alpha,n}\} = \alpha$$
+$$P\{T_n \leq t_{\alpha,n}\} = 1- \alpha$$
+$$P\{T_n > -t_{\alpha,n}\} = 1- \alpha$$
+$$-t_{\alpha, n} = t_{1-\alpha, n}$$
+\subsubsection{F-Distribution}
+$\chi_n^2$ ind. of $\chi_m^2$
+$$Y=\frac{\chi_n^2/n}{\chi_m^2/m} \sim F_{n,m}$$
+$$E[Y] = \frac{m}{m-2}, m>2$$
+$$Var(Y) = 2 \left(\frac{m}{m-2}\right)^2\frac{n+m-2}{n(m-4)}, m>4$$
+$$P\{Y > F_{\alpha,n,m}\} = \alpha$$
+$$P\{Y \leq F_{\alpha,n,m}\} = 1-\alpha$$
+$$F_{1-\alpha,m,n} = \frac{1}{F_{\alpha,n,m}}$$
