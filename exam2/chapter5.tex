@@ -1,0 +1,101 @@
+\subsection{Discrete Distributions}
+\subsubsection{Bernoulli Distribution}
+$$X\sim Bernoulli(p), 0 < p < 1$$
+PMF:
+$$P(X = i) = p^i(1-p)^{1-i}, i \in \{0,1\}$$
+\subsubsection{Binomial Distribution}
+$$X\sim Binomial(n, p), 0 < p < 1$$
+PMF:
+$$P(X = k) = \binom{n}{k}p^k(1-p)^{n-k}$$
+CDF:
+$$P(X \leq i) = \sum_{k=0}^i P(X=k)$$
+$E[X] = np$,
+$Var(X) = np(1-p)$
+\subsubsection{Poisson}
+$$X\sim Poisson(\lambda), \lambda > 0$$
+Poisson distribution is applicable:
+
+The number of meteors greater than 1 meter diameter that strike earth in a year.
+The number of patients arriving in an emergency room between 10 and 11 pm
+
+PMF:
+$$P(X=i) = e^{-\lambda}\frac{\lambda^i}{i!}$$
+CDF:
+$$P(X\leq i) = e^{-\lambda} \sum_{k=0}^{\floor{i}} \frac{\lambda^k}{k!}$$
+$E[X] = \lambda$, $Var(X) = \lambda$.
+
+\subsubsection{Hypergeometric}
+$$X \sim Hypergeometric(N, M, n)$$
+$N$ good and $M$ bad.
+Sample size $n$ randomly chosen w/o replacement.
+Bin of transistors.
+
+PMF:
+$$P(X=i) = \frac{\binom{N}{i}\binom{M}{n-i}}{\binom{N+M}{n}}$$
+CDF:
+$$P(X\leq i) = \sum_{k=0}^i \frac{\binom{N}{i}\binom{M}{n-i}}{\binom{N+M}{n}}$$
+
+$E[X] = \frac{nN}{N+M}$, $Var(X_i) = \frac{N}{N+M} \frac{M}{N+M}$
+$$Var(X) = np(1-p)\left(1-\frac{n-1}{N+M-1}\right)$$
+
+PMF given two independent binomial random variables, $X, Y$ with respective
+parameters $(n,p)$ and $(m,p)$.
+$$P(X=i\given X+Y=k) = \frac{\binom{n}{i}\binom{m}{k-i}}{\binom{n+m}{k}}$$
+
+\subsection{Continuous Distributions}
+\subsubsection{Uniform Distribution}
+$$X\sim Uniform(\alpha, \beta)$$
+PDF:
+\begin{equation*}
+  f(x) =
+\begin{cases*}
+  \frac{1}{\beta-\alpha} & if \alpha \leq x \leq \beta\\
+  0 & otherwise
+\end{cases*}
+\end{equation*}
+CDF:
+$$P(a < X < b) = \frac{b-a}{\beta-\alpha}$$
+$E[X] = \frac{\alpha + \beta}{2}$, $Var(X) = \frac{(\beta-\alpha)^2}{12}$
+
+\subsubsection{Normal Distribution}
+$$X\sim \mathcal{N}(\mu, \sigma^2)$$
+PDF:
+$$f(x) = \frac{1}{\sqrt{2\pi}\sigma}\mathrm{e}^{-(x-\mu)^2/2\sigma^2}$$
+$E[X] = \mu$, $Var(X) = \sigma^2$
+
+$$Z=\frac{X-\mu}{\sigma} \sim \mathcal{N}(0, 1)$$
+$$\Phi(x) = P(Z\leq x) = \int_{-\infty}^x \frac{1}{2\pi} \mathrm{e}^{-\frac{z^2}{2}} dz$$
+$$\Phi(-x) = 1-\Phi(x),\ x > 0$$
+CDFs:
+$$P(X < b) = \Phi\left(\frac{b-\mu}{\sigma}\right)$$
+$$P(a < X < b) = \Phi\left(\frac{b-\mu}{\sigma}\right) - \Phi\left(\frac{a-\mu}{\sigma}\right)$$
+
+Sums of NRVs are also normal with $\mu = \sum \mu_i$, $\sigma^2 = \sum \sigma^2_i$.
+Linear transformations also produce normally distributed variables.
+$$a+bX \sim \mathcal{N}(a+b\mu, b^2\sigma^2)$$
+
+\subsubsection{Exponential Distribution}
+$$X\sim Exponential(\lambda),\ \lambda > 0$$
+PDF:
+$$f(x) = \lambda \mathrm{e}^{-\lambda x},\ x \geq 0$$
+CDF:
+$$P(X \leq i) = 1-\mathrm{e}^{-\lambda x},\ x \geq 0$$
+$E[X] = \lambda^{-1}$, $Var(X) = \lambda^{-2}$
+
+Exponential distribution is memoryless, adding conditions does not change the distribution.
+Useful for probability you will have to wait $x$ time for a bus that on average you have to wait $y$ for.
+
+\subsubsection{Chi-Square Distribution}
+$Z$ is a list of $n$ \textit{independent} standard normal variables.
+$$X=\sum_i^n Z_i^2$$
+$$X\sim \chi_n^2$$
+$E[X] = n$, $Var(X) = 2n$.
+CDF:
+$$P(X > \chi_{\alpha,n}^2) = \alpha,\ \alpha\in \{0,1\}$$
+$$P(X \leq \chi_{\alpha,n}^2) = 1-\alpha$$
+If $n=1$:
+$$X\sim \chi_1^2$$
+$$P(X<x) = P(-\sqrt{x} < Z < \sqrt{x})$$
+$$=2\Phi(\sqrt{x})-1$$
+If $n=2$:
+$$X\sim \chi_2^2 \sim Exponential\left(\frac{1}{2}\right)$$
